@@ -1,0 +1,41 @@
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &_face {
+        background-image: url("../media/section/face.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+    }
+
+    &_healthy {
+        background-color: rgb(9, 33, 36);
+        background-image: linear-gradient(to bottom right, rgba(9, 33, 36, 1) 0%, rgba(118, 25, 51, 1) 100%);
+    }
+}
+
+.section__title {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1030px) {
+    .section__title {
+        font-size: 40px;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .section__title {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section__title {
+        font-size: 28px;
+    }
+}

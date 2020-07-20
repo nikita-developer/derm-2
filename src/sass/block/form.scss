@@ -3,26 +3,13 @@
     position: relative;
     z-index: 1;
     max-width: 290px;
-    margin-top: 65px;
     margin-bottom: 30px;
     margin-left: auto;
-    font-family: "Raleway", sans-serif;
 }
 
 .form__wrap {
     padding: 20px 15px;
     background-color: #fff;
-}
-
-.form__border {
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    z-index: -1;
-    width: calc(100% + 6px);
-    height: calc(100% + 6px);
-    background: #7b9d95;
-    border-radius: 3px;
 }
 
 .form__title {
@@ -72,7 +59,7 @@
 .form__price-main {
     font-size: 32px;
     font-weight: 700;
-    color: #ffa200;
+    color: #1ed0ac;
 }
 
 .form__time {
@@ -111,11 +98,11 @@
 
     & span {
         display: block;
-        font-weight: 500;
+        font-weight: 700;
 
         &:first-child {
-            font-size: 28px;
-            line-height: 47px;
+            font-size: 31px;
+            line-height: 50px;
             text-align: center;
         }
 
@@ -189,9 +176,8 @@
     margin-top: 25px;
     font-size: 16px;
     font-weight: 700;
-    color: #fff;
-    background: rgb(255, 159, 1);
-    background: linear-gradient(180deg, rgba(255, 159, 1, 1) 0%, rgba(255, 5, 29, 1) 100%);
+    background: rgb(176, 225, 150);
+    background: linear-gradient(90deg, rgba(176, 225, 150, 1) 0%, rgba(52, 211, 169, 1) 100%);
     border: none;
     border-radius: 40px;
     transition: .3s;
@@ -206,15 +192,8 @@
     }
 }
 
-@media (max-width: 1030px) {
-    .form {
-        margin-top: 75px;
-    }
-}
-
 @media (max-width: 768px) {
     .form {
-        margin-top: 40px;
         margin-right: auto;
         margin-bottom: 0;
         margin-left: auto;
