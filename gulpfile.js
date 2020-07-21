@@ -8,7 +8,7 @@ var browserSync = require('browser-sync'),
     ejs = require("gulp-ejs"),                      // шаблонизатор HTML
     del = require('del'),                           // удаление
     rename = require('gulp-rename'),                // переименованиеvar
-    gulpStylelint = require('gulp-stylelint'),      // linter
+    // gulpStylelint = require('gulp-stylelint'),      // linter
     gcmq = require('gulp-group-css-media-queries'); // комбинирует стили
 
 gulp.task('gcmq', function () {
@@ -18,14 +18,14 @@ gulp.task('gcmq', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('lintCss', function lintCssTask() {
-  return gulp.src('src/sass/block/*.scss')
-    .pipe(gulpStylelint({
-      reporters: [
-        {formatter: 'string', console: true}
-      ]
-    }));
-});
+// gulp.task('lintCss', function lintCssTask() {
+//   return gulp.src('src/sass/block/*.scss')
+//     .pipe(gulpStylelint({
+//       reporters: [
+//         {formatter: 'string', console: true}
+//       ]
+//     }));
+// });
 
 gulp.task('sass', function () {
   return gulp.src(['src/sass/core/*.scss', 'src/sass/plugin/**/*.scss', 'src/sass/block/**/*.scss'])
@@ -62,9 +62,9 @@ gulp.task('sync', function () {
   });
 
   gulp.watch(['src/template/*.html', 'src/js/*.js', 'src/media/', 'src/fonts/']).on('change', browserSync.reload);
-  gulp.watch('src/sass/**/*.scss', gulp.series('sass', 'lintCss', 'gcmq'));
+  gulp.watch('src/sass/**/*.scss', gulp.series('sass', 'gcmq'));
   gulp.watch('src/js/plugin/**/*.js', gulp.series('js'));
   gulp.watch('src/template/ejs/**/*.ejs', gulp.series('del', 'ejs'));
 });
 
-gulp.task('default', gulp.series('sass', 'lintCss', 'gcmq', 'js', 'ejs', 'sync'));
+gulp.task('default', gulp.series('sass', 'gcmq', 'js', 'ejs', 'sync'));

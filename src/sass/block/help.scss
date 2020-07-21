@@ -1,0 +1,136 @@
+
+.help {
+    position: relative;
+}
+
+.help__title {
+    max-width: 670px;
+    margin-bottom: 30px;
+    font-size: 37px;
+    line-height: 37px;
+    color: #fff;
+
+    & mark {
+        color: #fac8b2;
+    }
+}
+
+.help__subtitle {
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.help__list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 540px;
+    margin-bottom: 30px;
+}
+
+.help__list-item {
+    flex: 0 0 25%;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .25);
+    text-transform: uppercase;
+    border-radius: 3px;
+
+    & span {
+        display: block;
+    }
+}
+
+.help__info {
+    max-width: 500px;
+
+    & p {
+        color: #fff;
+        line-height: 20px;
+
+        & + p {
+            margin-top: 20px;
+        }
+    }
+}
+
+.help__product {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: -125px;
+
+    &::before {
+        position: absolute;
+        bottom: 25px;
+        left: -115px;
+        z-index: -1;
+        width: 543px;
+        height: 410px;
+        content: '';
+        background-image: url("../media/product-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 1030px) {
+    .help__product {
+        max-width: 150px;
+        bottom: 0;
+
+        &::before {
+            left: -75px;
+            width: 290px;
+            height: 219px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .help__info  {
+        max-width: 300px;
+    }
+
+    .help__product {
+        max-width: 120px;
+
+        &::before {
+            left: -30px;
+            width: 180px;
+            height: 136px;
+        }
+    }
+
+    .help__list {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-right: -5px;
+        margin-left: -5px;
+    }
+
+    .help__list-item {
+        margin-bottom: 10px;
+        margin-right: 5px;
+        margin-left: 5px;
+        flex: 0 1 auto;
+
+        & span {
+            display: inline;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .help__product {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-top: 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

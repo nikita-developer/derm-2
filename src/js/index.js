@@ -5,6 +5,10 @@ $(document).ready(function() {
         offset: 60
     });
 
+    $('.mistakes__item').click(function() {
+        $(this).children('.mistakes__body').toggleClass('mistakes__body_hide');
+    })
+
     $('.form__field').focus( function() {
         $(this).addClass('form__field_active')
     }).blur(function () {

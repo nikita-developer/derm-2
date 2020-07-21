@@ -1,0 +1,114 @@
+
+.mistakes__title {
+    margin-bottom: 40px;
+    font-size: 54px;
+    line-height: 54px;
+    color: #fff;
+    text-align: center;
+
+    & mark {
+        color: #fac8b2;
+    }
+
+    & span {
+        display: block;
+    }
+}
+
+.mistakes__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 310px;
+    padding: 0 50px 0 410px;
+    margin-right: 70px;
+    background-color: #fff;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 100%;
+
+    & + & {
+        margin-top: 25px;
+    }
+
+    &_right {
+        padding: 0 410px 0 50px;
+        margin-right: 0;
+        margin-left: 70px;
+        background-position: right center;
+    }
+
+    &:nth-child(1) {
+        background-image: url("../media/mistakes/img-1.jpg");
+    }
+
+    &:nth-child(2) {
+        background-image: url("../media/mistakes/img-2.jpg");
+    }
+
+    &:nth-child(3) {
+        background-image: url("../media/mistakes/img-3.jpg");
+    }
+}
+
+.mistakes__item-title {
+    margin-bottom: 20px;
+    font-size: 29px;
+    font-weight: 600;
+}
+
+@media (max-width: 1030px) {
+    .mistakes__item {
+        height: auto;
+        padding: 30px 30px 30px 315px;
+        margin-right: 0;
+        margin-left: 0;
+
+        &_right {
+            padding: 30px 410px 30px 30px;
+        }
+    }
+
+    .mistakes__body {
+        padding: 20px 0 20px 30px;
+        border-radius: 5px;
+        background-color: #fff;
+
+        &_right {
+            padding: 20px 30px 20px 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .mistakes__item {
+        padding: 20px 30px;
+        background-size: cover;
+    }
+
+    .mistakes__body {
+        padding: 30px;
+        opacity: 1;
+        transition: .3s opacity;
+
+        &_hide {
+            opacity: 0;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .mistakes__item {
+        padding: 15px;
+    }
+
+    .mistakes__item-title {
+        line-height: 1;
+        font-size: 24px;
+    }
+
+    .mistakes__body {
+        padding: 15px;
+    }
+}
