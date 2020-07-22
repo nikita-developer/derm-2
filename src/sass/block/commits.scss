@@ -1,11 +1,10 @@
 
 .commits__title {
-    max-width: 590px;
     margin-right: auto;
     margin-bottom: 30px;
     margin-left: auto;
-    font-size: 68px;
-    line-height: 59px;
+    font-size: 39px;
+    line-height: 39px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -40,11 +39,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px;
     padding: 20px 23px;
-    margin: 42px 20px 20px;
-    background-color: #f8f8f8;
-    border-radius: 5px;
+    margin-top: 45px;
+    background-color: #fff;
+    border: 2px solid #000;
 }
 
 .commits__face {
@@ -54,6 +52,7 @@
     overflow: hidden;
     border: 5px solid #f8f8f8;
     border-radius: 50%;
+    border: 4px solid #13ae8b;
 }
 
 .commits__name {
@@ -61,12 +60,33 @@
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: 700;
-    color: #1273be;
+
+    & mark {
+        color: #13ae8b;
+    }
 }
 
 .commits__description {
     width: 100%;
     line-height: 21px;
+}
+
+.commits__star {
+    display: flex;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.commits__star-item {
+    width: 32px;
+    height: 30px;
+    background-image: url("../media/commits/star.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    & + & {
+        margin-left: 5px;
+    }
 }
 
 @media (max-width: 1030px) {

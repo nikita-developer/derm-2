@@ -1,0 +1,134 @@
+
+.warning {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px;
+    background-color: #ff4e00;
+}
+
+.warning__media {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 220px;
+    margin-top: -18px;
+}
+
+.warning__media-item {
+    flex: 0 0 101px;
+    margin-top: 18px;
+}
+
+.warning__product {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 154px;
+    margin-left: -145px;
+
+    &::before {
+        position: absolute;
+        bottom: 20px;
+        left: -55px;
+        z-index: -1;
+        width: 270px;
+        height: 204px;
+        content: '';
+        background-image: url("../media/product-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.warning__box {
+    &:first-child {
+        display: flex;
+        align-items: center;
+    }
+    &:last-child {
+        max-width: 460px;
+    }
+}
+
+.warning__title {
+    margin-bottom: 30px;
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.warning__description {
+    font-size: 18px;
+    color: #fff;
+
+    & mark {
+        font-weight: 700;
+        color: inherit;
+    }
+}
+
+@media (max-width: 1030px) {
+    .warning__media {
+        width: 160px;
+    }
+
+    .warning__media-item {
+        max-width: 70px;
+    }
+
+    .warning__product {
+        max-width: 120px;
+        margin-left: -100px;
+
+        &::before {
+            bottom: 10px;
+            left: -40px;
+            width: 210px;
+            height: 158px;
+        }
+    }
+
+    .warning__box {
+        &:last-child {
+            max-width: 315px;
+        }
+    }
+
+    .warning__title {
+        margin-bottom: 15px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .warning {
+        flex-direction: column-reverse;
+        padding: 30px 15px;
+    }
+
+    .warning__box {
+        &:last-child {
+            max-width: 100%;
+        }
+    }
+
+    .warning__product {
+        position: static;
+        margin: 20px auto;
+        transform: translate(0, 0);
+    }
+
+    .warning__media {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+    }
+}
