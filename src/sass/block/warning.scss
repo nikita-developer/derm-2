@@ -122,8 +122,13 @@
     }
 
     .warning__media {
+        width: 220px;
         margin-right: auto;
         margin-left: auto;
+    }
+
+    .warning__media-item {
+        max-width: 100px;
     }
 }
 

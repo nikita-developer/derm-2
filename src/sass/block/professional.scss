@@ -90,6 +90,8 @@
 
     .professional__media {
         position: static;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .professional__body {
@@ -105,5 +107,9 @@
 @media (max-width: 480px) {
     .professional__name {
         flex: 0 0 145px;
+    }
+
+    .professional__media {
+        margin-bottom: -30px;
     }
 }

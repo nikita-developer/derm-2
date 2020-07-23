@@ -97,6 +97,42 @@
 }
 
 @media (max-width: 768px) {
+    .commits__box {
+        & .owl-nav {
+            position: absolute;
+            top: 31px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            & button {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                background-image: url("../media/commits/next.svg") !important;
+                background-repeat: no-repeat !important;
+
+                & span {
+                    display: none;
+                }
+
+                & + button {
+                    margin-left: 200px;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            & .owl-prev {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
     .commits__item {
         width: auto;
     }

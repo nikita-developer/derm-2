@@ -92,7 +92,7 @@
         }
 
         &_problems {
-            padding-bottom: 400px;
+            padding-bottom: 430px;
             background-image: url("../media/section/problems-768.jpg");
         }
     }
@@ -102,10 +102,45 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
     .section {
         &_aggravation {
+            background-image: url("../media/section/aggravation-580.jpg");
+        }
+    }
+
+    .section__title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        &_aggravation {
             background-image: url("../media/section/aggravation-320.jpg");
+        }
+
+        &_problems {
+            padding-bottom: 325px;
+        }
+
+        &_info {
+            padding-top: 0;
+        }
+
+        &_warning {
+            padding-top: 0;
+        }
+
+        &_step {
+            padding-bottom: 0;
+        }
+
+        &_why {
+            padding-top: 0;
         }
     }
 
