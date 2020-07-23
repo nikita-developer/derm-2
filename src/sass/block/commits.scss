@@ -100,17 +100,19 @@
     .commits__box {
         & .owl-nav {
             position: absolute;
-            top: 31px;
+            top: 65px;
             left: 0;
             right: 0;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
 
             & button {
                 display: inline-block;
-                width: 30px;
-                height: 30px;
+                width: 45px;
+                height: 45px;
                 background-image: url("../media/commits/next.svg") !important;
                 background-repeat: no-repeat !important;
 
